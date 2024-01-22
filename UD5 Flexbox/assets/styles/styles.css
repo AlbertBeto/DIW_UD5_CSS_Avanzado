@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedorFlex {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    flex-wrap:wrap; /*Con esto hacemos que cuando llene la linea los siguientes los ponga debajo*/
+    justify-content: space-between;
+    /*justify-content: space-between; /*Con esto justificamos los campos.*/
+    /*justify-content: flex-end; /* Flex end o flex start es para alinear a la izq o a la derecha*/
+    /*justify-content: space-around; /* Este sirve para dar aire a todas las direcciones y que no quede pegado a los filos laterales.*/
+    align-items: center;
+    /*align-items: stretch;/*Es el predeterminado y hace crecer el objeto de alto ya que noda espacio superior inferior*/
+    gap: 60px 20px; /*Primer valor verticales y segundo horizontal. Es como un margin pero solo de espacio eentre ellos.*/
+}
+
+.contenedorFlex div {
+    background-color: pink;
+    padding: 15px 40px;
+    width: 200px;
+    text-align: center;
+
+    /*Para los hijos*/
+    flex-grow: 1; /*Permite crecer al elemento  pero no decrecer*/
+}
+
+header{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+header div{
+    flex-grow: 1;
+    flex-basis: 100px;/*Esto sería para decirle el tamaño de base*/
+    flex-shrink: 0;/*Con esto hacemos que contenedor nunca cambie de tamaño*/
+    /*flex: flex-grow flex-shrink flex-basis  Con esto ponemos los tres valores enuna sola linea*/
+    /*flex: 1 0 100px; Esto es lo mismo que las tres primera lineas*/
+
+}
+header nav{
+    flex-grow: 3;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.primero{
+    order: -1;/*Order 0 es en el orden normal. Si ponemos un negativo pues se adelanta*/
+/*Esto combinado con una media query podriamos hacer mover un div a una posición superior cuando cambia de tamaño. */
+}
