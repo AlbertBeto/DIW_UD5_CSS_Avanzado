@@ -8,7 +8,7 @@
     display: grid;
     /*Si buscamos el div padre en el inspector veremos que aparece un boton llamado grid
     y si lo apretamos nos mostrara una ayuda visual*/
-    
+
     /*Esto hace que partir el div en 4 columnas de 200px
     grid-template-columns: 200px 200px 200px 200px;*/
     /*En esta opción le decimos que nos repita 4 veces las columnas de 200px*/
@@ -16,7 +16,30 @@
     grid-template-rows: repeat(4,100px);*/
     /*Tambien podemos usar para responsive en vez de medidas el fr que es fracción*/
     grid-template-columns: 3fr 1fr 3fr;
-    grid-template-rows: repeat(4,6fr);
+    grid-template-rows: repeat(4, 6fr);
     /*Podemos utilizar gap como en flex para tener espacio entre objetos, antiguamente se usaba grid-gap*/
     gap: 20px;
 }
+
+/*Larabel Nova*/
+
+body {
+    background: white;
+    color: black;
+}
+
+body.darkMode {
+    background: #444;
+    color: white;
+}
+
+
+/* Mediaqueri para saber si el sistema está puesto en light or dark claro a oscuro*/
+/*
+@media (prefers-color-scheme: light){
+    body{
+        background: #444;
+        color: white;
+    }
+}
+*/
